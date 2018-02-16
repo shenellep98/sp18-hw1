@@ -1,15 +1,15 @@
 def squared_sum(a, b)
-  # Q1 CODE HERE
-
+  (a + b)**2
 end
 
 def sort_array_plus_one(a)
-  # Q2 CODE HERE
+  copy = a.sort
+  copy.map!{|num| num + 1}
 
 end
 
 def combine_name(first_name, last_name)
-  # Q3 CODE HERE
+  first_name + " " + last_name
 
 end
 
@@ -48,5 +48,7 @@ def scrabble(word)
     y: 4,
     z: 10,
   }
-  # Q5 CODE HERE
+  require 'active_support'
+  require 'active_support/core_ext'
+  worarr = word.split("").map{|x| x.to_sym}.map{|x| values[x]}.sum
 end
